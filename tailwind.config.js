@@ -1,12 +1,17 @@
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  mode: "jit",
+  purge: ["./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "media", // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+        "noto-serif": ["Noto Serif", "serif"],
+      },
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
