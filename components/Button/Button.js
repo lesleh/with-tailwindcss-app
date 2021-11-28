@@ -4,9 +4,9 @@ const BUTTON_VARIANTS = {
   primary: "bg-blue-500 hover:bg-blue-600 text-white",
   secondary: "bg-green-600 hover:bg-green-700 text-white",
   "ghost-primary":
-    "bg-transparent text-blue-500 border border-blue-500 hover:bg-blue-500 hover:text-white",
+    "bg-transparent text-blue-500 border border-current hover:bg-blue-500 hover:text-white",
   "ghost-secondary":
-    "bg-transparent text-green-500 border border-green-500 hover:bg-green-500 hover:text-white",
+    "bg-transparent text-green-500 border border-current hover:bg-green-500 hover:text-white",
 };
 
 const SIZES = {
