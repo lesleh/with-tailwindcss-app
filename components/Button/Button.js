@@ -9,25 +9,34 @@ const BUTTON_VARIANTS = {
     "bg-transparent text-green-500 border border-green-500 hover:bg-green-500 hover:text-white",
 };
 
+const SIZES = {
+  small: "px-2 py-1 text-sm",
+  medium: "px-4 py-2 text-md",
+  large: "px-6 py-3 text-lg",
+};
+
 export function Button(props) {
   const {
     children,
-    variant = "ghost-secondary",
+    variant = "primary",
     className,
     disabled,
     onClick,
     type,
+    label,
+    size = "medium",
     ...rest
   } = props;
 
   const classes = clsx(
     "rounded",
     "button",
-    "px-4",
-    "py-2",
-    BUTTON_VARIANTS[variant],
+    SIZES[size],
+    `Button--${variant}`,
     {
-      "button--disabled": disabled,
+      [BUTTON_VARIANTS[variant]]: !disabled,
+      "Button--disabled": disabled,
+      "text-gray-50 bg-gray-300 cursor-not-allowed": disabled,
     },
     className
   );
@@ -40,7 +49,7 @@ export function Button(props) {
       disabled={disabled}
       {...rest}
     >
-      {children}
+      {label || children}
     </button>
   );
 }
